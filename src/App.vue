@@ -25,7 +25,7 @@
 
         <div @click="addInput('0')" class="btn">0</div>
         <div @click="decimal()" class="btn">.</div>
-        <div class="btn">**</div>
+        <div @click="squared()" class="btn">**</div>
         <div @click="equal()" class="btn operator">=</div>
     </div>
 </template>
@@ -72,6 +72,9 @@ export default {
         },
         multiply() {
             this.addToInputLog("*");
+        },
+        squared() {
+            this.addToInputLog("**");
         },
         decimal() {
             if (this.Input.indexOf(".") === -1) {
